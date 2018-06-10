@@ -1,0 +1,6 @@
+= form_for @link, html: { class: 'new-link-form' } do |f|
+  .inputs
+    = f.text_field :target_url, placeholder: 'Put original URL here', class: 'url_field'
+    = f.submit 'Shorten URL', class: 'button'
+  .errors
+    = @link.errors[:target_url].to_sentence

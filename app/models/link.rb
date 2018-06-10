@@ -10,6 +10,6 @@
 #
 
 class Link < ApplicationRecord
-  validates :target_url, presence: true, url: true, length: { maximum: 2048 }
+  validates :target_url, presence: true, url: { allow_blank: true }, length: { maximum: 2048 }
   validates :token, presence: true, length: { maximum: 32 }
 end
