@@ -37,8 +37,10 @@ end
 group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'capybara_discoball'
+  gem 'sinatra'
+  gem 'capybara-screenshot'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

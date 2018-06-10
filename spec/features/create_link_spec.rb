@@ -5,7 +5,7 @@ describe 'Create new link' do
 
   before do
     visit root_path
-    fill_in 'link[target_url]', with: url
+    fill_in 'link_target_url', with: url
     click_button 'Shorten URL'
   end
 
@@ -14,7 +14,8 @@ describe 'Create new link' do
   end
 
   it 'redirects to link page' do
-    expect(page).to have_content("Original URL:#{url}")
+    expect(page).to have_content("Original URL:\n#{url}")
+    expect(page).to have_content("Short URL")
   end
 
   context 'when URL is blank' do

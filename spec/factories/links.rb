@@ -11,7 +11,7 @@
 
 FactoryBot.define do
   factory :link do
-    url 'https://www.google.com/search?q=ruby+on+rails'
+    target_url 'https://www.google.com/search?q=ruby+on+rails'
     token { CreateLink.generate_token }
   end
 end
