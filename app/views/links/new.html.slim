@@ -4,3 +4,5 @@
     = f.submit 'Shorten URL', class: 'button'
   .errors
     = @link.errors[:target_url].to_sentence
+
+= render 'latest'

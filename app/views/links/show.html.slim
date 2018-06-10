@@ -1,5 +1,5 @@
 dl
   dt Original URL:
-  dd= link_to @link.target_url, @link.target_url, target: '_blank'
+  dd= original_url(@link)
   dt Short URL:
-  dd= link_to redirect_url(token: @link.token), redirect_url(token: @link.token), target: '_blank'
+  dd= short_link(@link)
