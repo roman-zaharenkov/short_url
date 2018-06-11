@@ -9,6 +9,10 @@
 #  created_at :datetime
 #  link_id    :integer
 #
+# Indexes
+#
+#  index_clicks_on_link_id  (link_id)
+#
 
 class Click < ApplicationRecord
   belongs_to :link

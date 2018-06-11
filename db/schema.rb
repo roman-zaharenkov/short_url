@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_10_233625) do
+ActiveRecord::Schema.define(version: 2018_06_11_001626) do
 
   create_table "clicks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "link_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_233625) do
     t.string "ip"
     t.string "referer"
     t.datetime "created_at"
+    t.index ["link_id"], name: "index_clicks_on_link_id"
   end
 
   create_table "links", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_233625) do
     t.string "token", limit: 32
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_links_on_token", unique: true
   end
 
 end
