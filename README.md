@@ -41,4 +41,6 @@ rake spec:unit && rake spec:feature
 * Create background job for clicks tracking;
 * Configure rubocop;
 * Configure TravisCI;
+* Parse user location with GeoIP service;
+* Add aggregated statistic to API response (e.g. how many users from particular country clicked to link).
 * Consider NoSQL solution for storing clicks.
