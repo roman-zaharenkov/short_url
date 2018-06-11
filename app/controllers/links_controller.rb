@@ -15,6 +15,8 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find(params[:id])
+    @clicks = Click.latest_for(@link.id)
+    @total_clicks = @link.clicks.count
     respond_with(@link)
   end
 

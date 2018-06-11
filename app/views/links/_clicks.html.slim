@@ -1,0 +1,17 @@
+.clicks
+  h3. Clicks
+
+  table.table
+    thead
+      tr
+        th Click time
+        th User Agent
+        th IP
+        th Referer
+    tbody
+      - @clicks.each do |click|
+        tr
+          td= click.created_at
+          td= click.user_agent
+          td= click.ip
+          td= click.referer

@@ -14,8 +14,9 @@ describe 'Create new link' do
   end
 
   it 'redirects to link page' do
-    expect(page).to have_content("Original URL:\n#{url}")
-    expect(page).to have_content("Short URL")
+    expect(page).to have_current_path(link_path(Link.last))
+    # expect(page).to have_content("Original URL:\n#{url}")
+    # expect(page).to have_content("Short URL")
   end
 
   context 'when URL is blank' do

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_08_213918) do
+ActiveRecord::Schema.define(version: 2018_06_10_233625) do
+
+  create_table "clicks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "link_id"
+    t.string "user_agent"
+    t.string "ip"
+    t.string "referer"
+    t.datetime "created_at"
+  end
 
   create_table "links", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "target_url", limit: 2048

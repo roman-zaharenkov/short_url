@@ -3,3 +3,7 @@ dl
   dd= original_url(@link)
   dt Short URL:
   dd= short_link(@link)
+  dt Total clicks count:
+  dd= @total_clicks
+
+= render 'clicks'
