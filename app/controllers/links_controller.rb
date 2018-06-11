@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  respond_to :html
+  respond_to :html, :json
 
   before_action :load_latest, only: %i[new create]
 
