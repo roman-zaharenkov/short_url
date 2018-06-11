@@ -1,24 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements:
 
-Things you may want to cover:
+* ruby 2.4+
+* MySQL server
 
-* Ruby version
+## Setup:
 
-* System dependencies
+```
+gem install bundler
+bundle
+rake db:migrate
 
-* Configuration
+rails s
+```
 
-* Database creation
+## Specs:
 
-* Database initialization
+In order to run spces you have to install `chromedriver` first (e.g. `brew install chromedriver`for Mac OS).
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rspec
+```
 
-* Deployment instructions
+or
 
-* ...
+```
+rake spec
+```
+
+or
+
+```
+rake spec:unit && rake spec:feature
+```
+
+## TODO:
+
+* Create background job for clicks tracking;
+* Configure rubocop;
+* Configure TravisCI;
+* Consider NoSQL solution for storing clicks.
